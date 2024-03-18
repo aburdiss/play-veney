@@ -1,5 +1,5 @@
 # play-veney
-Side project to implement Sword-Chess, aka https://veney.xyz/.
+Side project to implement Veney, aka Sword-Chess, aka https://veney.xyz/. It seems like a really interesting programming challenge. 
 
 Project goals: 
 * [ ] start by creating a _representation_ of Veney game states. I'd like it to be programming-language-independent, and interoperable, because I've got a buddy that knows JavaScript, and I do not. So a JSON file probably.
@@ -8,3 +8,5 @@ Project goals:
 * [ ] Play veney online!
 * [ ] ???
 * [ ] Reinforcement Learning environment!
+
+Oh, and Veney is an [evolving game](https://veney.xyz/changelog), so all the above should be written for extensibility and flexibility if possible. 
