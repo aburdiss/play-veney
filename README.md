@@ -1,6 +1,8 @@
 # play-veney
 Side project to implement Veney, aka Sword-Chess, aka https://veney.xyz/. It seems like a really interesting programming challenge. 
 
+This project based on Veney, v2.0, July 2022. Veney created by "chaff", and is Creative Commons Attribution NonCommercial 4.0 International (CC BY-NC 4.0).
+
 Project goals: 
 * [ ] start by creating a _representation_ of Veney game states. I'd like it to be programming-language-independent, and interoperable, because I've got a buddy that knows JavaScript, and I do not. So a JSON file probably.
 * [ ] Then, build software that can read and _visualize_ it. This does not require implementing any of the logic or rules, just reading in the JSON and showing the state.
@@ -10,3 +12,7 @@ Project goals:
 * [ ] Reinforcement Learning environment!
 
 Oh, and Veney is an [evolving game](https://veney.xyz/changelog), so all the above should be written for extensibility and flexibility if possible. 
+
+
+Project structure based on https://docs.python-guide.org/writing/structure/ aribtrarily.
+
