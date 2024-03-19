@@ -31,8 +31,10 @@ class GameState:
         row_index = self._notation_to_index(row)
 
         print(f"row index, col index: {row_index},{col_index}")
-
-        self.board[row_index][col_index] = [piece for piece in pieces]
+        if not pieces:
+            self.board[row_index][col_index] = [""]
+        else:
+            self.board[row_index][col_index] = [piece for piece in pieces]
 
     def save_state(self, gamestate_file: Path):
         gamestate_dict = {
@@ -62,7 +64,7 @@ class GameState:
         repr = f"\n\nGAME STATE\nhistory: {self.history}\n"
         repr = repr + "board: \n"
         
-        print("W")
+
         for i, row in enumerate(self.board):
             repr  = repr + f"{16-i:<{column_width}}"
             for col in row:
@@ -83,18 +85,34 @@ if __name__ == "__main__":
     gamestate = GameState()
     print(f"History at start is {gamestate.history}")
     
-    gamestate.history = "aw,"
+
+
+
+    for piece, col in zip("C$SB", "WXYZ"):
+        gamestate.set_position(row="4", col=col, pieces=[piece])
+
+    for piece, col in zip("BS$C", "WXYZ"):
+        gamestate.set_position(row="13", col=col, pieces=[piece])
+
+    for col in "wxyz":
+        gamestate.set_position(row="5", col=col, pieces="e")
+        gamestate.set_position(row="12", col=col, pieces="e")
+
+    print(f"gamestate after first set is {gamestate}")
+
+    gamestate.history = "1. aw"
 
     print(f"History after first meta-move is {gamestate.history}")
 
-    gamestate.set_position(row="4", col="X", pieces="$")
-    print(f"gamestate after first set is {gamestate}")
+    
     gamestate.save_state(test_file)
     print(f"saving state at this point to {test_file}")
 
-    gamestate.history = "aw,e6"
+    gamestate.history = "1. aw W6" # move the engagement on W to 6
+    gamestate.set_position(col="w", row="5", pieces="")
+    gamestate.set_position(col="w", row="6", pieces="e")
 
-    print(f"History after first turn is {gamestate.history}")
+    print(f"gamestate after first turn is {gamestate}")
 
     print(f"loading state from {test_file}")
     gamestate.load_state(test_file)
