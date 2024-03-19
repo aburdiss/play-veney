@@ -62,6 +62,7 @@ class GameState:
         column_width = 3
 
         repr = f"\n\nGAME STATE\nhistory: {self.history}\n"
+        repr = repr + f"Discard Pile: {self.discard_pile}\n"
         repr = repr + "board: \n"
         
 
@@ -77,6 +78,7 @@ class GameState:
         for letter in " wxyz":
             repr = repr + f"{letter:^{column_width+1}}"
         repr = repr +"\n"
+        
         return repr
 
 
