@@ -1,0 +1,23 @@
+---
+Veney
+April 11, 2024
+Alexander Burdiss - White
+Nathaniel Adkins - Black
+---
+1. a+ eX6, a- eY9;
+2. a+ D*X6, az BZ10;
+3. a+ L*Z3, $Y11 SY12;
+4. a+ LW3, a- G*X11;
+5. a+ $Z6 SZ5, az GX10;
+6. a+ R*Z8, a- D*X11;
+7. a+ G*Y6, aw J*Y13;
+8. a+ SY4 LY3, aY14;
+9. CX6 CW8, JY14 JtGY6;
+10. a+ SZ5 DfJY6; a- R*Y4;
+11. a+ $Y5 $feY9, DY10 SX11;
+12. a+ $Y7 SZ6, eW11;
+13. a+ J*Z5, GX9 SY12;
+14. a+ JX5, a- GfCW8;
+15. a+ $W5 $tGW8; $W11 $t$W8;
+16. a+ DY5, DY7 SY9;
+17. *D#;
